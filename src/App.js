@@ -3,14 +3,12 @@ import BookCreate from "./Components/BookCreate";
 import { useEffect, useContext } from "react";
 import BooksContext from "./Context/Books";
 
-
 function App() {
-
-  const {fetchBook} = useContext(BooksContext)
+  const { fetchBook } = useContext(BooksContext);
 
   useEffect(() => {
     fetchBook();
-  }, []);
+  }, [fetchBook]);
 
   return (
     <div className="app">
